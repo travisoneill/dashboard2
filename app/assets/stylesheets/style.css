@@ -1,0 +1,239 @@
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #596679;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+/*div {
+  border: 1px solid;
+}*/
+
+p {
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1
+}
+
+.column.left {
+  flex: 2;
+  align-items: flex-start;;
+}
+
+.column.center {
+  flex: 3;
+}
+
+.column.right {
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-statement {
+  flex: 1;
+  font-size: 2.5rem;
+  display: flex;
+  text-align: center;
+}
+
+.targets {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.target-list {
+  list-style: none;
+  flex: 1;
+  padding-left: 10px;
+}
+
+.target-bullet {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+.goals-container {
+  flex: 1;
+}
+
+.goals-list {
+  /*list-style: none;*/
+}
+
+.goal {
+  font-size: 2.25rem;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.green {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.stat-list {
+  display: flex;
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.total {
+  color: #1e5ce3;
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+.diff {
+  font-size: 0.75rem;
+}
+
+.label {
+  font-size: 0.9rem;
+}
+
+.chart-container {
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recent-keywords-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.recent-keywords-row{
+  display: flex;
+}
+
+.recent-keywords-row.top{
+  border-bottom: 1px solid;
+  padding-bottom: 1%;
+  font-weight: 700;
+}
+
+.recent-keywords-row.bottom{
+  padding-top: 1%;
+}
+
+.rkw {
+  display: flex;
+  justify-content: center;
+}
+
+.rkw.id {
+  flex: 1;
+}
+
+.rkw.keyword {
+  flex: 3;
+}
+
+.rkw.searches {
+  flex: 3;
+}
+
+.rkw.awcpc {
+  flex: 3;
+}
+
+.rkw.tenV {
+  flex: 3;
+}
+
+.cash-flow-container {
+  display: flex;
+  padding-bottom: 5%;
+}
+
+.cash-flow-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cf-number {
+  color: #1e5ce3;
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+.cf-title {
+  font-size: 1.167rem;
+}
+
+.days-since-fucked {
+
+}
+
+.fucked-or-not {
+  font-size: 6.875rem;
+  font-weight: bold;
+}
+
+.svg-container {
+
+}
+
+.chart-display {
+
+}
+
+/*SVG ELEMENT STYLING*/
+.axis {
+  stroke: #000000;
+  font-size: 16px;
+}
+
+.axis path {
+  stroke: #000000;
+  fill: none;
+}
+
+.axis line {
+  stroke: #000000;
+  fill: none;
+}
+
+.axis .tick text {
+  fill: #000000;
+  stroke: none;
+}
+
+.bar {
+  fill: #3054ea;
+}
+
+.chart-title {
+  font-size: 1.25rem;
+}
