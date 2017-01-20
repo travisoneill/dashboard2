@@ -44,6 +44,8 @@ gem 'intercom-rails'
 gem 'colorbox-rails'
 gem 'meta-tags'
 
+gem 'coffee-rails', '~> 4.1.0'
+
 group :development, :test do
   gem 'awesome_print', :require => 'ap'
   gem 'factory_girl_rails', '~> 4.0'
@@ -55,6 +57,7 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
 end
+
 
 group :development do
   gem 'better_errors'
