@@ -4,6 +4,7 @@ ruby '2.3.1'
 gem 'rails', '4.2.2'
 gem 'pg'
 gem 'puma'
+gem 'sqlite3'
 
 ### View Layer
 gem 'bootstrap-sass', '~> 3.3.5'
@@ -64,7 +65,7 @@ group :development do
   gem 'letter_opener'
   gem 'quiet_assets'
   gem 'web-console', '~> 2.0' # Access an IRB console on exception pages or by using <%= console %> in views
-
+  gem 'rb-readline'
   gem 'rack-livereload'
 end
 

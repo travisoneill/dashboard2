@@ -13,7 +13,7 @@ export class Chart extends Component {
   }
 
   cycleChart(){
-    let dayIntervals = [7, 30];
+    let dayIntervals = [30];
     this.idx = (this.idx + 1) % dayIntervals.length;
     let numDays = dayIntervals[this.idx];
     let chartData = this.data.slice(-numDays);
