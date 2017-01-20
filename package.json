@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm install && webpack --config webpack_deploy.config.js --progress -p",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "heroku-postbuild": "npm run deploy"
   },
   "keywords": [],
   "author": "",
