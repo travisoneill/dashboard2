@@ -21,7 +21,8 @@ gem 'uglifier'
 gem 'closure-compiler'
 gem 'd3-rails'
 gem 'c3-rails'
-
+gem 'sprockets'
+gem 'sprockets-es6'
 ### Authentication
 gem 'devise'
 gem 'figaro'
