@@ -26,7 +26,7 @@ gem 'figaro'
 gem 'rolify'
 
 ### Payment
-gem 'payola-payments', '~> 1.5.x'
+# gem 'payola-payments', '~> 1.5.x'
 
 ### monitoring
 gem 'scout_apm', '~> 2.0.x'
