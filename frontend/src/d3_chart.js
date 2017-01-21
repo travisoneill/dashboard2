@@ -60,11 +60,14 @@ d3Chart.create = function(htmlElement, props){
   this.chart = this.svg.append('g').attr('class', 'chart-display')
                        .attr('transform', `translate(${chartMargin.left},${chartMargin.top})`);
   //append y axis
-  this.chart.append('g').attr('class', 'axis').call(yAxis);
-  //append x axis
   this.chart.append('g').attr('class', 'axis')
-                        .attr('transform', `translate(0 ,${chartHeight})`) //puts axis on bottom of chart
-                        .call(xAxis);
+            .call(yAxis);
+  //append x axis
+  this.chart.append('g')
+            .attr('class', 'axis')
+            .attr('transform', `translate(0 ,${chartHeight})`) //puts axis on bottom of chart
+            .attr('id', 'xAxis')
+            .call(xAxis);
 
   // this.bars = this.chart.append('g');
 
@@ -81,6 +84,15 @@ d3Chart.create = function(htmlElement, props){
   // debugger;
   props.data.forEach( (value, index) => { drawBar(value, index); } );
 
+  //label only some bars
+  //TODO: make this responsive to data length
+  //TODO: add for y axis
+  let xTicks = document.querySelector('#xAxis').querySelectorAll('.tick');
+  for (var i = 0; i < xTicks.length; i++) {
+    if(i%5){
+      xTicks[i].style.display = 'none';
+    }
+  }
 };
 
 d3Chart.update = function(htmlElement, data, title){

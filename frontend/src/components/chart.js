@@ -12,12 +12,13 @@ export class Chart extends Component {
     this.idx = 0;
   }
 
-  cycleChart(){
+  cycleChart(cycle){
     let dayIntervals = [30];
     this.idx = (this.idx + 1) % dayIntervals.length;
     let numDays = dayIntervals[this.idx];
     let chartData = this.data.slice(-numDays);
     d3Chart.update(this.chartContainer, chartData, this.title);
+    if(!cycle){ clearInterval(this.interval); }
   }
 
   _onDataChange(newData){
@@ -42,7 +43,9 @@ export class Chart extends Component {
 
   componentWillUnmount(){
     let interval = this.interval;
-    clearInterval(interval);
+    if(interval){
+      clearInterval(interval);
+    }
     d3Chart.remove();
   }
 
