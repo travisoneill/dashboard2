@@ -28,7 +28,7 @@ p {
 
 .column.left {
   flex: 2;
-  align-items: flex-start;;
+  align-items: center;
 }
 
 .column.center {
@@ -238,16 +238,65 @@ p {
   font-size: 1.25rem;
 }
 
+@media screen and (max-width: 1400px) {
+  html {
+  }
+
+  .mission-statement {
+    font-size: 2rem;
+  }
+
+  .goal {
+    font-size: 1.75rem;
+  }
+
+  .target-bullet {
+    font-size: 2.25rem;
+  }
+
+  .fucked-or-not {
+    font-size: 4rem;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+  }
+
+  .mission-statement {
+    font-size: 1.5rem;
+  }
+
+  .goal {
+    font-size: 1.25rem;
+  }
+
+  .target-bullet {
+    font-size: 1.75rem;
+  }
+
+  .fucked-or-not {
+    font-size: 3rem;
+  }
+
+}
+
 @media screen and (max-width: 800px) {
   html {
-    /*font-size: 8px*/
   }
 
   .app-container {
     display: block;
     height: auto;
   }
+
   .column {
     width: 100vw;
   }
+
+  .fucked-or-not {
+    font-size: 6.875rem;
+  }
+
 }
