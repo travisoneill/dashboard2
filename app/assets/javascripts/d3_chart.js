@@ -47,7 +47,6 @@ d3Chart.create = function(htmlElement, props){
   const middle = chartWidth / 2;
   const titleRight = (middle - titleDimensions.width / 2).toString();
   const titleVertical = (7 * svgHeight / 100).toString();
-  console.log(titleRight, titleVertical);
   this.svg.append('text')
           .text(props.title)
           .attr('class', 'chart-title')
@@ -96,7 +95,6 @@ d3Chart.create = function(htmlElement, props){
 d3Chart.update = function(htmlElement, data, title){
   if(this.svg){ this.svg.remove(); } //remove old
   let newProps = {data: data, title: title}
-  console.log('update');
   this.create(htmlElement, newProps);
 }
 

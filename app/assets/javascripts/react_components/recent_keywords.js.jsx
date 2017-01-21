@@ -40,7 +40,6 @@ class RecentKeywords extends React.Component {
     const keywordList = this.state.data.map( (keyword, idx) => {
       return <RecentKeywordRow rowData={keyword} key={idx} />
     });
-    console.log(keywordList);
     return (
       <div className='recent-keywords-container'>
         <div className='recent-keywords-row top'>

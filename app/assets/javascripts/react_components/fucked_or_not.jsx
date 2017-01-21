@@ -16,10 +16,16 @@ const FuckedOrNot = () => {
 
     localStorage.fucked = text === 'Fucked';
   }
+  // initialize fucked status to 'not fucked'
+  localStorage.fucked = localStorage.fucked || 'false';
+  
+  // initialize text and color based on fucked status
+  let initialText = localStorage.fucked === 'true' ? 'Fucked' : 'Not Fucked';
+  let initialColor = localStorage.fucked === 'true' ? 'red' : 'green';
 
   return (
-    <div className='fucked-or-not green' onClick={toggle}>
-      Not Fucked
+    <div className={`fucked-or-not ${initialColor}`} onClick={toggle}>
+      {initialText}
     </div>
   )
 }

@@ -8,6 +8,9 @@ class DaysSinceFucked extends React.Component {
   }
 
   checkLastFucked(){
+    //initialize fucked clock
+    localStorage.lastFucked = localStorage.lastFucked || Date.now()
+    // reset fucked clock if fucked
     if(localStorage.fucked === 'true'){
       localStorage.lastFucked = Date.now();
     }
