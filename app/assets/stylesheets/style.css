@@ -237,3 +237,17 @@ p {
 .chart-title {
   font-size: 1.25rem;
 }
+
+@media screen and (max-width: 800px) {
+  html {
+    /*font-size: 8px*/
+  }
+
+  .app-container {
+    display: block;
+    height: auto;
+  }
+  .column {
+    width: 100vw;
+  }
+}

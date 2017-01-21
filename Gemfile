@@ -2,9 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 gem 'rails', '4.2.2'
-gem 'pg'
 gem 'puma'
-gem 'sqlite3'
 
 ### View Layer
 gem 'bootstrap-sass', '~> 3.3.5'
