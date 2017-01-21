@@ -1,9 +1,6 @@
 'use strict';
-import React, { Component } from 'react';
-import { getCashFlow } from '../demo_data';
-import { dollarFormat } from '../util/util_functions';
 
-export class CashFlow extends Component {
+class CashFlow extends React.Component {
   constructor(props){
     super(props);
     this.state = { weekly: 0, monthly: 0 };

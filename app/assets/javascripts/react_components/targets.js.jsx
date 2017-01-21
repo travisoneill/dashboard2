@@ -1,7 +1,6 @@
 'use strict';
-import React from 'react';
 
-export const Targets = () => {
+const Targets = () => {
   return (
     <div className='targets'>
       <ul className='target-list'>

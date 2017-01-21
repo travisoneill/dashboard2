@@ -1,4 +1,4 @@
-export const getCMRRData = (callback) => {
+const getCMRRData = (callback) => {
   const data = {
     newCMRR: { prev: 6215, curr: 1700 },
     acctUpgrades: { prev: 0, curr: 0 },
@@ -7,7 +7,7 @@ export const getCMRRData = (callback) => {
   callback(data);
 }
 
-export const getRecentKeywords = (callback) => {
+const getRecentKeywords = (callback) => {
   const data = [
     {id: 1, keyword: 'client', searches: 101, awcpc: 13.37, _10V: 100000 },
     {id: 2, keyword: 'success', searches: 342, awcpc: 13.45, _10V: 20000 },
@@ -17,7 +17,7 @@ export const getRecentKeywords = (callback) => {
   callback(data);
 }
 
-export const getCashFlow = (callback) => {
+const getCashFlow = (callback) => {
   const data = {
     weekly: 26840,
     monthly: 74416
@@ -25,7 +25,7 @@ export const getCashFlow = (callback) => {
   callback(data);
 }
 
-export const getChartData = (callback) => {
+const getChartData = (callback) => {
   const data = [0,1,2,3,4,3,2,5,6,3,4,5,6,7,2,0,3,2,1,2,3,5,8,4,2,5,7,9,11,13];
   callback(data);
 }

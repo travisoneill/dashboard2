@@ -1,6 +1,6 @@
 'use strict';
 
-export const dollarFormat = (num, showCents) => {
+const dollarFormat = (num, showCents) => {
   let [dollars, cents] = num.toString().split('.');
   dollars = dollars[0] === '-' ? dollars.slice(1) : dollars;
   let dollarString = '';

@@ -1,9 +1,6 @@
 'use strict';
-import React, { Component } from 'react';
-import { d3Chart } from '../d3_chart';
-import { getChartData } from '../demo_data';
 
-export class Chart extends Component {
+class Chart extends React.Component {
 
   constructor(props){
     super(props);

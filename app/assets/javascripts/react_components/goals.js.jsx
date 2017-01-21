@@ -1,7 +1,6 @@
 'use strict';
-import React from 'react';
 
-export const Goals = () => {
+const Goals = () => {
   const cycle = (event) => {
     const colors = ['green', 'yellow', 'red'];
     let classes = event.target.className.split(' ');

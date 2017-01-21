@@ -1,7 +1,6 @@
 'use strict';
-import React, { Component } from 'react';
 
-export class DaysSinceFucked extends Component {
+class DaysSinceFucked extends React.Component {
 
   constructor(props){
     super(props);

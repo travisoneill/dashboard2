@@ -1,9 +1,6 @@
 'use strict';
-import React, { Component } from 'react';
-import { getRecentKeywords } from '../demo_data';
-import { dollarFormat } from '../util/util_functions';
 
-export class RecentKeywords extends Component {
+class RecentKeywords extends React.Component {
   constructor(props){
     super(props);
     this.state = {idx: 0, data: [{id: 0, keyword: '', searches: 0, awcpc: 0, _10V: 0 }] };

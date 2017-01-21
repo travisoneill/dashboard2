@@ -1,7 +1,6 @@
 'use strict';
-import React from 'react';
 
-export const FuckedOrNot = () => {
+const FuckedOrNot = () => {
   const toggle = (event) => {
     const colors = ['green', 'red'];
     let classes = event.target.className.split(' ');

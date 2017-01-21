@@ -1,6 +1,4 @@
-import * as d3 from 'd3';
-
-export const d3Chart = {};
+const d3Chart = {};
 
 const svgWidth = 500;
 const svgHeight = 310;

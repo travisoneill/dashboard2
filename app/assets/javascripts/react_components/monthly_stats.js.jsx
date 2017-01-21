@@ -1,9 +1,6 @@
 'use strict';
-import React, { Component } from 'react';
-import { getCMRRData } from '../demo_data';
-import { dollarFormat } from '../util/util_functions';
 
-export class MonthlyStats extends Component {
+class MonthlyStats extends React.Component {
 
   constructor(props){
     super(props);
