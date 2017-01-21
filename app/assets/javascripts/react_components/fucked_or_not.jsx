@@ -18,7 +18,7 @@ const FuckedOrNot = () => {
   }
   // initialize fucked status to 'not fucked'
   localStorage.fucked = localStorage.fucked || 'false';
-  //sdgbsdf
+
   // initialize text and color based on fucked status
   let initialText = localStorage.fucked === 'true' ? 'Fucked' : 'Not Fucked';
   let initialColor = localStorage.fucked === 'true' ? 'red' : 'green';
