@@ -12,9 +12,7 @@ class RecentKeywords extends React.Component {
 
   getData(){
     const _updateData = this._onDataChange.bind(this);
-    setTimeout(function(){
-      getRecentKeywords(_updateData);
-    }, 500 );
+    getRecentKeywords(_updateData);
   }
 
   componentDidMount(){

@@ -28,9 +28,7 @@ class Chart extends React.Component {
 
   getData(){
     const _updateData = this._onDataChange.bind(this);
-    setTimeout(function(){
-      getChartData(_updateData);
-    }, 1000 );
+    getChartData(_updateData);
   }
 
   componentDidMount(){

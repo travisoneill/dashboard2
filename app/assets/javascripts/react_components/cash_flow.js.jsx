@@ -12,9 +12,7 @@ class CashFlow extends React.Component {
 
   getData(){
     const _updateData = this._onDataChange.bind(this);
-    setTimeout(function(){
-      getCashFlow(_updateData);
-    }, 500 );
+    getCashFlow(_updateData);
   }
 
   componentDidMount(){

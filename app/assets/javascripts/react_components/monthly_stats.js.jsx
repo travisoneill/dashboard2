@@ -17,9 +17,7 @@ class MonthlyStats extends React.Component {
 
   getData(){
     const _updateData = this._onDataChange.bind(this);
-    setTimeout(function(){
-      getCMRRData(_updateData);
-    }, 500 );
+    getCMRRData(_updateData);
   }
 
   componentDidMount(){

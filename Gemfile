@@ -4,6 +4,7 @@ ruby '2.3.1'
 gem 'rails', '4.2.2'
 gem 'puma'
 gem 'react-rails'
+gem 'pg'
 
 ### View Layer
 gem 'bootstrap-sass', '~> 3.3.5'
@@ -18,9 +19,7 @@ gem 'jquery-ui-rails', '~> 5.0.5'
 gem 'rails_real_favicon'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier'
-gem 'closure-compiler'
 gem 'd3-rails'
-gem 'c3-rails'
 gem 'sprockets'
 gem 'sprockets-es6'
 ### Authentication

@@ -8,5 +8,5 @@
 //= require_tree ./react_components
 
 //= require util_functions.js
-//= require demo_data.js
 //= require d3_chart.js
+//= require api_calls.js
