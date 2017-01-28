@@ -57,7 +57,9 @@ class App extends React.Component {
     this.setState({ dashboardState: newDashboardState });
   }
 
-  _onDataChange({ newDashboardData }){
+  _onDataChange( newDashboardData ){
+    console.log('CHANGE');
+    console.log(newDashboardData);
     this.setState({ dashboardData: newDashboardData });
   }
 
@@ -84,6 +86,7 @@ class App extends React.Component {
     console.log('sdffg');
     let dashData = this.state.dashboardData;
     let dashState = this.state.dashboardState;
+    console.log(dashState);
     if(!dashData){
       console.log('nothing');
       return <div>NOTHING</div>;

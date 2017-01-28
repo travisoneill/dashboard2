@@ -32,14 +32,13 @@ class APICall {
       method: this.method,
       data: this.data,
       success(res){
-        console.log(res);
+        console.log(res, format);
         runFormatCheck(res, format);
       }
     });
   }
 
   formatCheck(obj, template, verbose){
-    console.log(verbose);
     if(verbose){
       console.log('--------------------------');
       console.log('TEST OBJECT:');
@@ -50,12 +49,12 @@ class APICall {
     if(typeof template !== typeof obj){
       throw `ERROR: object contains incorrect data type`;
     } else if (typeof template === 'object') {
-      for(key in template){
+      for(var key in template){
         if(key in obj){
           if(verbose){
             console.log('---PASS---');
           }
-          check( obj[key], template[key], verbose)
+          this.formatCheck( obj[key], template[key], verbose)
         } else {
           throw `key ${key} missing from json`
         }
@@ -69,6 +68,9 @@ class APICall {
     } catch(e) {
       this.formatCheck(obj, template, true);
     } finally {
+      console.log('finally');
+      console.log(obj);
+      console.log(this.callback);
       this.callback(obj);
     }
   }
