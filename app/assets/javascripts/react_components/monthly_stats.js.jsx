@@ -4,30 +4,31 @@ class MonthlyStats extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {
-      newCMRR: { prev: 0, curr: 0 },
-      acctUpgrades: { prev: 0, curr: 0 },
-      oppsCreated: { prev: 0, curr: 0, amt: 0 }
-    }
+    // this.state = {
+    //   newCMRR: { prev: 0, curr: 0 },
+    //   acctUpgrades: { prev: 0, curr: 0 },
+    //   oppsCreated: { prev: 0, curr: 0, amt: 0 }
+    // }
   }
 
-  _onDataChange({newCMRR, acctUpgrades, oppsCreated}){
-    this.setState({newCMRR: newCMRR, acctUpgrades: acctUpgrades, oppsCreated: oppsCreated});
-  }
+  // _onDataChange({newCMRR, acctUpgrades, oppsCreated}){
+  //   this.setState({newCMRR: newCMRR, acctUpgrades: acctUpgrades, oppsCreated: oppsCreated});
+  // }
 
-  getData(){
-    const _updateData = this._onDataChange.bind(this);
-    getCMRRData(_updateData);
-  }
+  // getData(){
+  //   const _updateData = this._onDataChange.bind(this);
+  //   getCMRRData(_updateData);
+  // }
 
-  componentDidMount(){
-    this.getData();
-  }
+  // componentDidMount(){
+  //   this.getData();
+  // }
 
   render(){
-    const CMRR = this.state.newCMRR;
-    const ACCT = this.state.acctUpgrades;
-    const OPPS = this.state.oppsCreated;
+    if(!this.props.data){ return <div/>; }
+    const CMRR = this.props.data.newCMRR;
+    const ACCT = this.props.data.acctUpgrades;
+    const OPPS = this.props.data.oppsCreated;
     const month = Date().split(' ')[1];
     return (
       <div className='stat-list'>

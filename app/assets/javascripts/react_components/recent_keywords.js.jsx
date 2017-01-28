@@ -3,39 +3,39 @@
 class RecentKeywords extends React.Component {
   constructor(props){
     super(props);
-    this.state = {idx: 0, data: [{id: 0, keyword: '', searches: 0, awcpc: 0, _10V: 0 }] };
+    // this.state = {idx: 0, data: [{id: 0, keyword: '', searches: 0, awcpc: 0, _10V: 0 }] };
   }
 
-  _onDataChange(data){
-    this.setState({data: data});
-  }
+  // _onDataChange(data){
+  //   this.setState({data: data});
+  // }
+  //
+  // getData(){
+  //   const _updateData = this._onDataChange.bind(this);
+  //   getRecentKeywords(_updateData);
+  // }
+  //
+  // componentDidMount(){
+  //   this.getData();
+  //   let cycleTimeout = this.cycle.bind(this);
+  //   // this.interval = setInterval(cycleTimeout, 2000);
+  // }
 
-  getData(){
-    const _updateData = this._onDataChange.bind(this);
-    getRecentKeywords(_updateData);
-  }
+  // componentWillUnmount(){
+  //   const interval = this.interval;
+  //   clearInterval(interval);
+  // }
 
-  componentDidMount(){
-    this.getData();
-    let cycleTimeout = this.cycle.bind(this);
-    // this.interval = setInterval(cycleTimeout, 2000);
-  }
-
-  componentWillUnmount(){
-    const interval = this.interval;
-    clearInterval(interval);
-  }
-
-  cycle(){
-    let idx = this.state.idx;
-    let cyc_length = this.state.data.length;
-    let newIdx = (idx + 1) % cyc_length;
-    this.setState({ idx: newIdx });
-  }
+  // cycle(){
+  //   let idx = this.state.idx;
+  //   let cyc_length = this.state.data.length;
+  //   let newIdx = (idx + 1) % cyc_length;
+  //   this.setState({ idx: newIdx });
+  // }
 
   render(){
     // const displayData = this.state.data[this.state.idx];
-    const keywordList = this.state.data.map( (keyword, idx) => {
+    const keywordList = this.props.data.map( (keyword, idx) => {
       return <RecentKeywordRow rowData={keyword} key={idx} />
     });
     return (
