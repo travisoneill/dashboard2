@@ -1,11 +1,12 @@
 class DashboardController < ApplicationController
 
   def get_dashboard_state
-    Dashboard.first
+    render json: Dashboard.state
   end
 
   def set_dashboard_state
-    Dashboard.first.update(params[:dashboard_state])
+    Dashboard.first.update(dashboard_params)
+    render json: Dashboard.state
   end
 
   def get_dashboard_data
@@ -15,6 +16,12 @@ class DashboardController < ApplicationController
       cash_flow: Dashboard.cash_flow,
       chart_data: Dashboard.chart_data
     }
+  end
+
+  private
+
+  def dashboard_params
+    params.require(:dashboardState).permit(:goals, :fucked, :lastFucked)
   end
 
 end

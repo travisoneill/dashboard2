@@ -1,7 +1,7 @@
 class CreateDashboards < ActiveRecord::Migration
   def change
     create_table :dashboards do |t|
-      t.string :fucked
+      t.boolean :fucked
       t.datetime :last_fucked
       t.string :goals
       t.timestamps null: false

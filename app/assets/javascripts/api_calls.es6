@@ -32,7 +32,7 @@ class APICall {
       method: this.method,
       data: this.data,
       success(res){
-        console.log(res, format);
+        // console.log(res, format);
         runFormatCheck(res, format);
       }
     });
@@ -68,9 +68,6 @@ class APICall {
     } catch(e) {
       this.formatCheck(obj, template, true);
     } finally {
-      console.log('finally');
-      console.log(obj);
-      console.log(this.callback);
       this.callback(obj);
     }
   }
@@ -90,72 +87,17 @@ const DATA_FORMAT = {
     {id: 0, keyword: 'string', searches: 0, awcpc: 0, _10V: 0 }
   ],
   cash_flow: {
-    weekly: 26840,
-    monthly: 74416
+    weekly: 0,
+    monthly: 0
   },
   chart_data: [0,1,2,3,4,3,2,5,6,3,4,5,6,7,2,0,3,2,1,2,3,5,8,4,2,5,7,9,11,13]
 };
 
-const STATE_FORMAT = {};
-//
-// const getDashboardData = () => {
-//   $.ajax({
-//     url: '/dashboard/cmrrdata',
-//     method: 'GET',
-//     success(res){
-//       callback(res);
-//     }
-//   });
-// }
-//
-// const getCMRRData = (callback) => {
-//   $.ajax({
-//     url: '/dashboard/cmrrdata',
-//     method: 'GET',
-//     success(res){
-//       callback(res);
-//     }
-//   });
-// }
-//
-// const getRecentKeywords = (callback) => {
-//   $.ajax({
-//     url: '/dashboard/recentkeywords',
-//     method: 'GET',
-//     success(res){
-//       callback(res);
-//     }
-//   });
-// }
-//
-// const getCashFlow = (callback) => {
-//   $.ajax({
-//     url: '/dashboard/cashflow',
-//     method: 'GET',
-//     success(res){
-//       callback(res);
-//     }
-//   });
-// }
-//
-// const getChartData = (callback) => {
-//   $.ajax({
-//     url: '/dashboard/chartdata',
-//     method: 'GET',
-//     success(res){
-//       callback(res);
-//     }
-//   });
-// }
-//
-// function g(text) {
-//   string = '';
-//   if(text){
-//     return 'g' + string + text;
-//   } else {
-//     string += 'o';
-//     return function(){
-//
-//     }
-//   }
-// }
+const STATE_FORMAT = {
+  created_at: "string",
+  fucked: true,
+  goals: "string",
+  id: 1,
+  last_fucked: "string",
+  updated_at: "string"
+};

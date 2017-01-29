@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170122230254) do
   enable_extension "plpgsql"
 
   create_table "dashboards", force: :cascade do |t|
-    t.string   "fucked"
+    t.boolean  "fucked"
     t.datetime "last_fucked"
     t.string   "goals"
     t.datetime "created_at",  null: false

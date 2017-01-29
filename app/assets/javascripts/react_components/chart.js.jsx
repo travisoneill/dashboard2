@@ -39,10 +39,10 @@ class Chart extends React.Component {
   }
 
   componentWillUnmount(){
-    let interval = this.interval;
-    if(interval){
-      clearInterval(interval);
-    }
+    // let interval = this.interval;
+    // if(interval){
+    //   clearInterval(interval);
+    // }
     d3Chart.remove();
   }
 

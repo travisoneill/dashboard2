@@ -1,5 +1,13 @@
 class Dashboard < ActiveRecord::Base
 
+  def self.state
+    Dashboard.first
+  end
+
+  # def update(params)
+  #   Dashboard.first.update(params)
+  # end
+
   def self.cmrr_data
     DEMO_DATA[:cmrr_data]
   end

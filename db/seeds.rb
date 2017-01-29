@@ -2,5 +2,5 @@
 Dashboard.create({
   fucked: true,
   last_fucked: Time.now,
-  goals: 'RRRRR'
+  goals: '00000000000000000000'
 })

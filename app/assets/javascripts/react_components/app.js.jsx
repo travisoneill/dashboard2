@@ -44,22 +44,21 @@
 class App extends React.Component {
   constructor(props){
     super(props);
-    console.log('app');
-    this._onDataChange = this._onDataChange.bind(this);
-    this._onStateChange = this._onStateChange.bind(this);
+    this.getDashboardData = new APICall('getDashboardData', this._onDataChange.bind(this));
+    this.getDashboardState = new APICall('getDashboardState', this._onStateChange.bind(this));
     this.state = {
       dashboardData: null,
-      dashboardState: {fucked: false, lastFucked: Date() }
+      dashboardState: {fucked: false, lastFucked: Date(), goals: '' }
     };
   }
 
-  _onStateChange({ newDashboardState }){
+  _onStateChange( newDashboardState ){
+    console.log('NEW STATE');
+    console.log(newDashboardState);
     this.setState({ dashboardState: newDashboardState });
   }
 
   _onDataChange( newDashboardData ){
-    console.log('CHANGE');
-    console.log(newDashboardData);
     this.setState({ dashboardData: newDashboardData });
   }
 
@@ -68,27 +67,17 @@ class App extends React.Component {
     // getDashboardData(_updateState);
   }
 
-  getData(){
-    const _updateData = this._onDataChange.bind(this);
-    // getDashboardData(_updateData);
-  }
-
   componentDidMount(){
-    console.log('mount');
-    let getDashboardData = new APICall('getDashboardData', this._onDataChange);
-    console.log('APICall instantiated');
-    getDashboardData.send();
+    this.getDashboardData.send();
+    this.getDashboardState.send();
     // this.getState();
-    // this.getData();
   }
 
   render(){
-    console.log('sdffg');
     let dashData = this.state.dashboardData;
     let dashState = this.state.dashboardState;
     console.log(dashState);
     if(!dashData){
-      console.log('nothing');
       return <div>NOTHING</div>;
     }
     return (
@@ -106,7 +95,7 @@ class App extends React.Component {
         </div>
         <div className='column right'>
           <DaysSinceFucked data={dashState.lastFucked} />
-          <FuckedOrNot data={dashState.fucked} />
+          <FuckedOrNot fucked={dashState.fucked} />
         </div>
       </div>
     )
