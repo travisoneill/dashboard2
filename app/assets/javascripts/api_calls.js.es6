@@ -47,7 +47,7 @@ class APICall {
       console.log(template);
     }
     if(typeof template !== typeof obj){
-      throw `ERROR: object contains incorrect data type`;
+      throw `API RESPONSE ERROR: object contains incorrect data type`;
     } else if (typeof template === 'object') {
       for(var key in template){
         if(key in obj){
@@ -56,7 +56,7 @@ class APICall {
           }
           this.formatCheck( obj[key], template[key], verbose)
         } else {
-          throw `key ${key} missing from json`
+          throw `API RESPONSE ERROR: key ${key} missing from json`
         }
       }
     }

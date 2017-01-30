@@ -3,21 +3,7 @@
 class CashFlow extends React.Component {
   constructor(props){
     super(props);
-    // this.state = { weekly: 0, monthly: 0 };
   }
-
-  // _onDataChange({ weekly, monthly }){
-  //   this.setState({ weekly: weekly, monthly: monthly });
-  // }
-  //
-  // getData(){
-  //   const _updateData = this._onDataChange.bind(this);
-  //   getCashFlow(_updateData);
-  // }
-  //
-  // componentDidMount(){
-  //   this.getData();
-  // }
 
   render(){
     return (

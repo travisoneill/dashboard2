@@ -4,25 +4,7 @@ class MonthlyStats extends React.Component {
 
   constructor(props){
     super(props);
-    // this.state = {
-    //   newCMRR: { prev: 0, curr: 0 },
-    //   acctUpgrades: { prev: 0, curr: 0 },
-    //   oppsCreated: { prev: 0, curr: 0, amt: 0 }
-    // }
   }
-
-  // _onDataChange({newCMRR, acctUpgrades, oppsCreated}){
-  //   this.setState({newCMRR: newCMRR, acctUpgrades: acctUpgrades, oppsCreated: oppsCreated});
-  // }
-
-  // getData(){
-  //   const _updateData = this._onDataChange.bind(this);
-  //   getCMRRData(_updateData);
-  // }
-
-  // componentDidMount(){
-  //   this.getData();
-  // }
 
   render(){
     if(!this.props.data){ return <div/>; }

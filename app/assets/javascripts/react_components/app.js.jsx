@@ -25,7 +25,6 @@ class App extends React.Component {
     this.getDashboardState.send();
     let self = this;
     this.interval = setInterval( function(){
-      console.log('INTERVAL');
       self.getDashboardData.send();
     }, 600000 );
   }

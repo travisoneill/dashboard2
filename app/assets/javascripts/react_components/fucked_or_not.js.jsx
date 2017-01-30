@@ -31,7 +31,7 @@ const FuckedOrNot = ({ fucked, lastFucked }) => {
   // initialize text and color based on fucked status
   let initialText = fucked ? 'Fucked' : 'Not Fucked';
   let initialColor = fucked ? 'red' : 'green';
-  // debugger;
+  //use local storage to keep fucked clock up to date
   localStorage.fucked = fucked;
   localStorage.lastFucked = lastFucked;
 
