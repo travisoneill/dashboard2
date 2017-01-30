@@ -5,7 +5,6 @@ class DashboardController < ApplicationController
   end
 
   def set_dashboard_state
-    # byebug
     timestamp = params[:dashboardState][:last_fucked]
     if timestamp
       params[:dashboardState][:last_fucked] = Integer(timestamp) / 1000

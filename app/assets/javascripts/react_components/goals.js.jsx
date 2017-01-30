@@ -41,6 +41,7 @@ const Goals = ({ data }) => {
     let newGoalState = data.split('').map( n => parseInt(n) );
     newGoalState[id] = idx;
     newGoalState = newGoalState.join('');
+    data = newGoalState;
     setDashboardState(newGoalState).send();
   };
 

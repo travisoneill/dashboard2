@@ -8,13 +8,11 @@ class App extends React.Component {
     this.getDashboardState = new APICall('getDashboardState', this._onStateChange.bind(this));
     this.state = {
       dashboardData: null,
-      dashboardState: {fucked: false, last_fucked: Date(), goals: '' }
+      dashboardState: { fucked: false, last_fucked: Date(), goals: '' }
     };
   }
 
   _onStateChange( newDashboardState ){
-    console.log('NEW STATE');
-    console.log(newDashboardState);
     this.setState({ dashboardState: newDashboardState });
   }
 
@@ -22,15 +20,19 @@ class App extends React.Component {
     this.setState({ dashboardData: newDashboardData });
   }
 
-  getState(){
-    const _updateState = this._onStateChange.bind(this);
-    // getDashboardData(_updateState);
-  }
-
   componentDidMount(){
     this.getDashboardData.send();
     this.getDashboardState.send();
-    // this.getState();
+    let self = this;
+    this.interval = setInterval( function(){
+      console.log('INTERVAL');
+      self.getDashboardData.send();
+    }, 600000 );
+  }
+
+  componentWillUnmount(){
+    interval = this.interval;
+    clearInterval(interval);
   }
 
   render(){
