@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170122230254) do
 
   create_table "dashboards", force: :cascade do |t|
     t.boolean  "fucked"
-    t.datetime "last_fucked"
+    t.integer  "last_fucked"
     t.string   "goals"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

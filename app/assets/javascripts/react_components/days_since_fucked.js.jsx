@@ -9,7 +9,7 @@ class DaysSinceFucked extends React.Component {
 
   checkLastFucked(){
     //initialize fucked clock
-    localStorage.lastFucked = localStorage.lastFucked || Date.now()
+    // localStorage.lastFucked = localStorage.lastFucked || Date.now()
     // reset fucked clock if fucked
     if(localStorage.fucked === 'true'){
       localStorage.lastFucked = Date.now();
@@ -17,10 +17,9 @@ class DaysSinceFucked extends React.Component {
     const lastFucked = localStorage.lastFucked;
     const msSinceFucked = Date.now() - lastFucked;
     // const daysSinceFucked = ~~( msSinceFucked / 1000 / 60 / 60 / 24 );
-    // return daysSinceFucked;
     //for testing
-    const secondsSinceFucked = ~~(msSinceFucked / 1000);
-    this.setState({daysSinceFucked: secondsSinceFucked});
+    const daysSinceFucked = ~~(msSinceFucked / 1000);
+    this.setState({daysSinceFucked: daysSinceFucked});
   }
 
   componentDidMount(){

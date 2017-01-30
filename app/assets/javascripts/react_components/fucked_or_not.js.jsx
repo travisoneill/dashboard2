@@ -1,10 +1,13 @@
 'use strict';
 
-const FuckedOrNot = ({ fucked }) => {
+const FuckedOrNot = ({ fucked, lastFucked }) => {
 
   const persistFuckedState = (fuckedState) => {
     let postData = { dashboardState: {fucked: fuckedState} };
-    return new APICall('setDashboardState', ()=>{}, postData);
+    if(fuckedState){
+      postData.fuckedState = { lastFucked: Date.now() };
+    }
+    return new APICall('setDashboardState', () => {}, postData);
   }
 
   const toggle = (event) => {
@@ -21,12 +24,16 @@ const FuckedOrNot = ({ fucked }) => {
     event.target.innerHTML = text;
 
     let newFuckedState = event.target.innerHTML === 'Fucked';
+    localStorage.fucked = newFuckedState;
     persistFuckedState(newFuckedState).send();
   }
 
-  // initialize text and color based on fucked status  console.log('FUCKED?');
+  // initialize text and color based on fucked status
   let initialText = fucked ? 'Fucked' : 'Not Fucked';
   let initialColor = fucked ? 'red' : 'green';
+  // debugger;
+  localStorage.fucked = fucked;
+  localStorage.lastFucked = lastFucked;
 
   return (
     <div className={`fucked-or-not ${initialColor}`} onClick={toggle}>

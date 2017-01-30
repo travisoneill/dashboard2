@@ -98,6 +98,6 @@ const STATE_FORMAT = {
   fucked: true,
   goals: "string",
   id: 1,
-  last_fucked: "string",
+  last_fucked: 1485735855,
   updated_at: "string"
 };

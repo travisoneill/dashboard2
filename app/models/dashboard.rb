@@ -1,7 +1,9 @@
 class Dashboard < ActiveRecord::Base
 
   def self.state
-    Dashboard.first
+    @dashboard = Dashboard.first
+    @dashboard.last_fucked *= 1000
+    @dashboard
   end
 
   # def update(params)
