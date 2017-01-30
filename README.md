@@ -7,6 +7,20 @@ properly formatted.  See line 41.  The error is caught in runFormatCheck on line
 and the data is passed to the app.  JSON Format errors will be printed to the
 console as 'API RESPONSE ERROR'
 
+###DB###
+Dashboard state (goal and fucked status) stored in the dashboards table.
+Schema:
+```ruby
+t.boolean  "fucked"
+t.integer  "last_fucked"
+t.string   "goals"
+t.datetime "created_at",  null: false
+t.datetime "updated_at",  null: false
+```
+Fucked clock time is stored as a utc integer. Goals state is stored as a
+string of '0's, '1's, or '2's. There are more characters than goals to allow
+easy changes in the number of goals on the dashboard.
+
 ###GOALS DISPLAY###
 Click on goal to cycle goal status.  Changes are persisted.  
 Add or remove a goal by adding the text to the object on line 9 of /app/assets/javascripts/react_components/goals.js.jsx
