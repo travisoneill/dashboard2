@@ -38,7 +38,6 @@ class App extends React.Component {
   render(){
     let dashData = this.state.dashboardData;
     let dashState = this.state.dashboardState;
-    console.log(dashState);
     if(!dashData){
       return <div>NOTHING</div>;
     }

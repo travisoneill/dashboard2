@@ -32,12 +32,12 @@ class APICall {
       method: this.method,
       data: this.data,
       success(res){
-        // console.log(res, format);
         runFormatCheck(res, format);
       }
     });
   }
 
+  //checks format of JSON object against a template
   formatCheck(obj, template, verbose){
     if(verbose){
       console.log('--------------------------');
@@ -62,6 +62,7 @@ class APICall {
     }
   }
 
+  //try catch on format check, shows errors if found, and passes to app regardless
   runFormatCheck(obj, template){
     try {
       this.formatCheck(obj, template);
@@ -74,6 +75,7 @@ class APICall {
 
 }
 
+//TEMPLATE FORMATS FOR JSON API RESPONSES
 const DATA_FORMAT = {
   cmrr_data: {
     newCMRR: { prev: 0, curr: 0 },
