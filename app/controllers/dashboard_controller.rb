@@ -5,6 +5,11 @@ class DashboardController < ApplicationController
   end
 
   def set_dashboard_state
+    # byebug
+    timestamp = params[:dashboardState][:last_fucked]
+    if timestamp
+      params[:dashboardState][:last_fucked] = Integer(timestamp) / 1000
+    end
     Dashboard.first.update(dashboard_params)
     render json: Dashboard.state
   end
@@ -21,7 +26,7 @@ class DashboardController < ApplicationController
   private
 
   def dashboard_params
-    params.require(:dashboardState).permit(:goals, :fucked, :lastFucked)
+    params.require(:dashboardState).permit(:goals, :fucked, :last_fucked)
   end
 
 end

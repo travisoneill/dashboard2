@@ -5,7 +5,7 @@ const FuckedOrNot = ({ fucked, lastFucked }) => {
   const persistFuckedState = (fuckedState) => {
     let postData = { dashboardState: {fucked: fuckedState} };
     if(fuckedState){
-      postData.fuckedState = { lastFucked: Date.now() };
+      postData.dashboardState.last_fucked = Date.now();
     }
     return new APICall('setDashboardState', () => {}, postData);
   }
